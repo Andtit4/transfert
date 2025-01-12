@@ -4,30 +4,30 @@ import 'package:transfert/core/theme/app_colors.dart';
 
 class AppTypography {
   static TextTheme textTheme = TextTheme(
-    headlineLarge: GoogleFonts.inter(
+    headlineLarge: GoogleFonts.poppins(
       fontSize: 32,
       fontWeight: FontWeight.bold,
       color: AppColors.textPrimary,
     ),
-    headlineMedium: GoogleFonts.inter(
+    headlineMedium: GoogleFonts.poppins(
       fontSize: 24,
       fontWeight: FontWeight.bold,
       color: AppColors.textPrimary,
     ),
-    titleLarge: GoogleFonts.inter(
+    titleLarge: GoogleFonts.poppins(
       fontSize: 20,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
     ),
-    bodyLarge: GoogleFonts.inter(
+    bodyLarge: GoogleFonts.poppins(
       fontSize: 16,
       color: AppColors.textSecondary,
     ),
-    bodyMedium: GoogleFonts.inter(
+    bodyMedium: GoogleFonts.poppins(
       fontSize: 14,
       color: AppColors.textSecondary,
     ),
-    labelLarge: GoogleFonts.inter(
+    labelLarge: GoogleFonts.poppins(
       fontSize: 16,
       fontWeight: FontWeight.w500,
       color: AppColors.textPrimary,
