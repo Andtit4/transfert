@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:transfert/presentation/cubit/navigation_cubit.dart';
 import 'package:transfert/presentation/pages/pages/home_page.dart';
+import 'package:transfert/presentation/pages/pages/setting_page.dart';
 import 'package:transfert/presentation/pages/widget/custom_bottom_nav.dart';
 
 class MainScreen extends StatelessWidget {
@@ -16,6 +17,7 @@ class MainScreen extends StatelessWidget {
               index: tab.index,
               children: [
                 HomePage(),
+                SettingsPage(),
                 /* const SettingsPage(),
                 const HistoryPage(),
                 const ProfilePage(), */
