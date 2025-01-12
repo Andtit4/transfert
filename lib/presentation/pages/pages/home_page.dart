@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:transfert/core/theme/app_colors.dart';
 import 'package:transfert/presentation/pages/widget/custom_bottom_nav.dart';
+import 'package:transfert/presentation/pages/widget/input.dart';
+import 'package:transfert/presentation/pages/widget/phone_input.dart';
 import 'package:transfert/presentation/pages/widget/verify_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
@@ -14,15 +16,14 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-              'Send Money \nall over the world',
-              style: Theme.of(context).textTheme.headlineMedium,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
-            _buildPillButton('My Informations',Color(0xFFDC5C5C) ),
-            const SizedBox(height: 8),
-
-            verificationCard() ,
+                'Send Money \nall over the world',
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 8),
+              _buildPillButton('My Informations', Color(0xFFFFF0F0)),
+              const SizedBox(height: 8),
+              verificationCard(),
               const SizedBox(height: 16),
               _buildTransactionCard(
                 title: 'Send to',
@@ -55,17 +56,9 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildPillButton(title, color),
-          const SizedBox(height: 16),
-          const Text(
-            'Saisissez un montant',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+          
           const SizedBox(height: 8),
-          Row(
+          /* Row(
             children: [
               Expanded(
                 flex: 2,
@@ -83,20 +76,56 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const SizedBox(height: 8),
-          _buildMinMaxRow(),
+          ), */
+          // const SizedBox(height: 8),
+          // _buildMinMaxRow(),
           if (showAddressField) ...[
-            const SizedBox(height: 16),
+            // const SizedBox(height: 16),
             const Text(
-              'Adresse',
+              'Recepient Information',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InputCustom(
+                  hintText: 'FirstName',
+                  hintColor: AppColors.inputColor,
+                  width: 130,
+                ),
+                InputCustom(
+                    hintText: 'FirstName',
+                    hintColor: AppColors.inputColor,
+                    width: 130),
+              ],
+            ),
+            const SizedBox(height: 16),
+            CustomPhoneInput(
+              onPhoneValidated: (String app) {},
+              hintColor: AppColors.inputColor,
+            ),
+            const SizedBox(height: 16),
+            InputCustom(
+              hintText: 'Location adress',
+              hintColor: AppColors.inputColor,
+              prefixIcon: Icon(Icons.location_on_outlined),
+            ),
+            const SizedBox(height: 16),
             TextField(
+              maxLines: 5,
+              decoration: InputDecoration(
+                hintText: 'Description',
+                border: OutlineInputBorder(),
+                fillColor: AppColors.inputColor,
+                filled: true,
+
+              ),
+            ),
+            /* TextField(
               
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.location_on_outlined),
@@ -111,8 +140,12 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
                 ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
               ),
-            ),
+            ), */
           ],
         ],
       ),
@@ -129,14 +162,14 @@ class HomePage extends StatelessWidget {
       child: Text(
         text,
         style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w500,
+          color: Color(0xFFDC5C5C),
+          // fontWeight: FontWeight.w500,
         ),
       ),
     );
   }
 
-  Widget _buildDropdownButton() {
+  /*  Widget _buildDropdownButton() {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
@@ -157,7 +190,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
-  }
+  } */
 
   Widget _buildMinMaxRow() {
     return Row(
@@ -172,10 +205,8 @@ class HomePage extends StatelessWidget {
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Min: ',
-                    style: TextStyle(color: Color(0xFF4A6FA5))),
-                Text('0',
-                    style: TextStyle(color: Color(0xFF4A6FA5))),
+                Text('Min: ', style: TextStyle(color: Color(0xFF4A6FA5))),
+                Text('0', style: TextStyle(color: Color(0xFF4A6FA5))),
               ],
             ),
           ),
@@ -191,10 +222,8 @@ class HomePage extends StatelessWidget {
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Max: ',
-                    style: TextStyle(color: Color(0xFFDC5C5C))),
-                Text('0',
-                    style: TextStyle(color: Color(0xFFDC5C5C))),
+                Text('Max: ', style: TextStyle(color: Color(0xFFDC5C5C))),
+                Text('0', style: TextStyle(color: Color(0xFFDC5C5C))),
               ],
             ),
           ),
@@ -217,7 +246,7 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Continuer',
+            'Continue',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
