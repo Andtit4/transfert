@@ -59,7 +59,15 @@ class _CustomPhoneInputState extends State<CustomPhoneInput> {
           hintText: widget.hintText ?? 'Phone Number',
           fillColor: widget.hintColor,
           filled: true,
-          border: InputBorder.none,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         ),

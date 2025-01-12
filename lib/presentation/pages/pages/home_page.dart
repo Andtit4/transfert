@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
-              _buildPillButton('My Informations', Color(0xFFFFF0F0)),
+              _buildPillButton('My Informations', Color.fromARGB(80, 255, 240, 240)),
               const SizedBox(height: 8),
               verificationCard(),
               const SizedBox(height: 16),
@@ -94,24 +94,24 @@ class HomePage extends StatelessWidget {
               children: [
                 InputCustom(
                   hintText: 'FirstName',
-                  hintColor: AppColors.inputColor,
+                  // hintColor: AppColors.inputColor,
                   width: 130,
                 ),
                 InputCustom(
                     hintText: 'FirstName',
-                    hintColor: AppColors.inputColor,
+                    // hintColor: AppColors.inputColor,
                     width: 130),
               ],
             ),
             const SizedBox(height: 16),
             CustomPhoneInput(
               onPhoneValidated: (String app) {},
-              hintColor: AppColors.inputColor,
+              // hintColor: AppColors.inputColor,
             ),
             const SizedBox(height: 16),
             InputCustom(
               hintText: 'Location adress',
-              hintColor: AppColors.inputColor,
+              // hintColor: AppColors.inputColor,
               prefixIcon: Icon(Icons.location_on_outlined),
             ),
             const SizedBox(height: 16),
@@ -119,9 +119,21 @@ class HomePage extends StatelessWidget {
               maxLines: 5,
               decoration: InputDecoration(
                 hintText: 'Description',
-                border: OutlineInputBorder(),
-                fillColor: AppColors.inputColor,
+                // border: OutlineInputBorder(),
+                // fillColor: AppColors.inputColor,
                 filled: true,
+                border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
 
               ),
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:transfert/di/injection.dart';
 import 'package:transfert/domain/repositories/settings_repository.dart';
 import 'package:transfert/domain/repositories/settings_repository_impl.dart';
 import 'package:transfert/domain/usecases/settings_usecase.dart';
@@ -12,15 +13,7 @@ class SettingsPageWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SettingsBloc(
-        // Vous devrez injecter vos usecases ici
-        SettingsUseCases(
-            // Ici, vous devriez injecter une instance concrète de votre repository
-            // Par exemple, si vous avez une classe SettingsRepositoryImpl qui implémente SettingsRepository,
-            // vous devriez l'injecter ici comme ceci :
-            SettingsRepositoryImpl(
-                SharedPreferences.getInstance() as SharedPreferences)),
-      )..add(LoadSettingsEvent()), // Charger les paramètres immédiatement
+      create: (context) => getIt<SettingsBloc>()..add(LoadSettingsEvent()), // Charger les paramètres immédiatement
       child: const SettingsPage(),
     );
   }
@@ -36,9 +29,19 @@ class SettingsPage extends StatelessWidget {
         title: const Text('Params'),
         automaticallyImplyLeading: false, // Cela enlève le bouton retour
         actions: [
-          IconButton(
-            icon: const Icon(Icons.dark_mode),
-            onPressed: () {},
+          BlocBuilder<SettingsBloc, SettingsState>(
+            builder: (context, state) {
+              final isDarkMode =
+                  state is SettingsLoaded ? state.settings.isDarkMode : false;
+              return IconButton(
+                icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                onPressed: () {
+                  context.read<SettingsBloc>().add(
+                        ToggleDarkModeEvent(!isDarkMode),
+                      );
+                },
+              );
+            },
           ),
           IconButton(
             icon: const Icon(Icons.headphones),

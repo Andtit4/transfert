@@ -12,6 +12,8 @@ class SettingsRepositoryImpl implements SettingsRepository {
     return Settings(
       isGoogleAuthEnabled: _prefs.getBool('google_auth_enabled') ?? false,
       language: _prefs.getString('language') ?? 'fr',
+            isDarkMode: _prefs.getBool('is_dark_mode') ?? false,
+
     );
   }
   
@@ -29,5 +31,11 @@ class SettingsRepositoryImpl implements SettingsRepository {
   Future<void> updateSettings(Settings settings) async {
     await _prefs.setBool('google_auth_enabled', settings.isGoogleAuthEnabled);
     await _prefs.setString('language', settings.language);
+    
+  }
+
+  @override
+  Future<void> toggleDarkMode(bool enabled) async {
+    await _prefs.setBool('is_dark_mode', enabled);
   }
 }

@@ -5,4 +5,6 @@ abstract class SettingsRepository {
   Future<void> updateSettings(Settings settings);
   Future<void> toggleGoogleAuth(bool enabled);
   Future<void> changeLanguage(String language);
+    Future<void> toggleDarkMode(bool enabled); // Nouvelle méthode
+
 }

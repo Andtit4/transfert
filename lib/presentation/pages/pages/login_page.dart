@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
             ), */
             InputCustom(
               hintText: 'Enter Email / Phone No',
-              hintColor: AppColors.inputColor,
+              // hintColor: AppColors.inputColor,
             ),
             const SizedBox(height: 16),
             /* TextFormField(
@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
             ), */
             InputCustom(
               hintText: 'Passcode',
-              hintColor: AppColors.inputColor,
+              // hintColor: AppColors.inputColor,
               suffix: Text('Hide'),
               obscureText: true,
             ),

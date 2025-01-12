@@ -15,7 +15,7 @@ class _verificationCardState extends State<verificationCard> {
     return Container(
       decoration: BoxDecoration(
         // color: Colors.white,
-        border: Border.all(color: Colors.grey),
+        // border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(16),
