@@ -4,7 +4,7 @@ import 'package:transfert/core/theme/app_colors.dart';
 import 'package:transfert/core/theme/app_theme.dart';
 import 'package:transfert/presentation/cubit/navigation_cubit.dart';
 import 'package:transfert/presentation/pages/main_screen.dart';
-import 'package:transfert/presentation/pages/pages/home_page.dart';
+import 'package:transfert/presentation/pages/pages/transaction_page.dart';
 import 'package:transfert/presentation/pages/widget/custom_bottom_nav.dart';
 import 'package:transfert/presentation/pages/widget/image.dart';
 import 'package:transfert/presentation/pages/widget/input.dart';

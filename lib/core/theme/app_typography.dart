@@ -23,6 +23,10 @@ class AppTypography {
       fontSize: 16,
       color: AppColors.textSecondary,
     ),
+    bodySmall: GoogleFonts.poppins(
+      fontSize: 12,
+      color: AppColors.textSecondary,
+    ),
     bodyMedium: GoogleFonts.poppins(
       fontSize: 14,
       color: AppColors.textSecondary,
