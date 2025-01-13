@@ -36,13 +36,13 @@ class CustomBottomNavBar extends StatelessWidget {
                 index: 0,
               ),
               _buildNavItem(
-                icon: Icons.refresh,
+                icon: Icons.history,
                 index: 1,
               ),
               // Espace pour le bouton central
               const SizedBox(width: 60),
               _buildNavItem(
-                icon: Icons.history,
+                icon: Icons.monetization_on,
                 index: 3,
               ),
               _buildNavItem(

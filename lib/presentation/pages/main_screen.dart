@@ -2,6 +2,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:transfert/presentation/cubit/navigation_cubit.dart';
 import 'package:transfert/presentation/pages/pages/dashboard/dashboard_page.dart';
+import 'package:transfert/presentation/pages/pages/historical_screen.dart';
+import 'package:transfert/presentation/pages/pages/history/histoy_page.dart';
 import 'package:transfert/presentation/pages/pages/send_money_page.dart';
 import 'package:transfert/presentation/pages/pages/transaction_page.dart';
 import 'package:transfert/presentation/pages/pages/setting_page.dart';
@@ -10,9 +12,10 @@ import 'package:transfert/presentation/pages/widget/custom_bottom_nav.dart';
 class MainScreen extends StatelessWidget {
   final List<Widget> _screens = [
     DashboardPage(),
-     HomePage(),
-    SettingsPage(),
+    HistoryPage(),
+    // HistoryPage(),
     SendMoneyPage(),
+    HistoricalScreen()
 
     /* const AddTransactionPage(),
     const NotificationsPage(),

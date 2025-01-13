@@ -5,7 +5,7 @@ class AppColors {
   // static const primary = Color(0xFF92d336); // Orange clair pour le bouton
   static const primary = Color(0xFF008080);
   static const secondary = Color(0xFF6C757D);
-  static const background = Colors.white;
+  static const background = Color.fromARGB(255, 245, 245, 245);
   static const backgroundBlack = Colors.black;
   static const surface = Colors.white;
 
