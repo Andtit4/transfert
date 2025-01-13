@@ -21,12 +21,12 @@ lib/
 └── presentation/
     ├── pages/           # Vos écrans
     ├── widgets/         # Les composants réutilisables
-    └── bloc/           # La gestion d'état, le Domain Layer, Département Stratégique. lib/
+    └── bloc/           # La gestion d'état, le Domain Layer, Département Stratégique
 └── domain/
     ├── entities/       # Vos modèles de données
     ├── usecases/       # Les actions possibles
-    └── repositories/   # Les contrats de données et le back office, lib/
+    └── repositories/   # Les contrats de données et le back office
 └── data/
     ├── repositories/   # L'implémentation concrète
     ├── datasources/    # Les sources de données
-    └── models/         # Les convertisseurs de données,
+    └── models/         # Les convertisseurs de données
