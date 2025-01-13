@@ -1,32 +1,31 @@
-# transfert
+# Transfert
 
 Un nouveau projet Flutter.
 
-## Pour commencer
+## Introduction
 
-Ce projet est un point de départ pour une application Flutter.
+Ce projet sert de point de départ pour le développement d'une application Flutter.
 
-Voici quelques ressources pour vous aider à démarrer si c'est votre premier projet Flutter :
+### Ressources utiles pour débuter :
 
-- [Lab: Créez votre première application Flutter](https://docs.flutter.dev/get-started/codelab)
-- [Carnet de recettes: Exemples utiles de Flutter](https://docs.flutter.dev/cookbook)
+- [Lab : Créez votre première application Flutter](https://docs.flutter.dev/get-started/codelab)  
+- [Recettes Flutter : Exemples pratiques](https://docs.flutter.dev/cookbook)
 
-Pour obtenir de l'aide pour démarrer avec le développement Flutter, consultez la
-[documentation en ligne](https://docs.flutter.dev/), qui propose des tutoriels,
-des exemples, des conseils sur le développement mobile, et une référence complète de l'API.
+Pour plus d'informations, consultez la [documentation Flutter](https://docs.flutter.dev/) qui propose des tutoriels, des exemples, des guides de développement mobile, et une référence complète de l'API.
 
-## Architecture du projet
+## Structure du projet
 
+```plaintext
 lib/
-└── presentation/
-    ├── pages/           # Vos écrans
-    ├── widgets/         # Les composants réutilisables
-    └── bloc/           # La gestion d'état, le Domain Layer, Département Stratégique
-└── domain/
-    ├── entities/       # Vos modèles de données
-    ├── usecases/       # Les actions possibles
-    └── repositories/   # Les contrats de données et le back office
-└── data/
-    ├── repositories/   # L'implémentation concrète
-    ├── datasources/    # Les sources de données
-    └── models/         # Les convertisseurs de données
+├── presentation/
+│   ├── pages/         # Écrans de l'application
+│   ├── widgets/       # Composants réutilisables
+│   └── bloc/          # Gestion d'état et logique stratégique
+├── domain/
+│   ├── entities/      # Modèles de données
+│   ├── usecases/      # Cas d'utilisation (actions)
+│   └── repositories/  # Interfaces pour la gestion des données
+├── data/
+│   ├── repositories/  # Implémentations concrètes des interfaces
+│   ├── datasources/   # Sources de données (API, base de données, etc.)
+│   └── models/        # Modèles pour les transformations de données
