@@ -4,6 +4,7 @@ import 'package:transfert/core/theme/app_theme.dart';
 import 'package:transfert/di/injection.dart';
 import 'package:transfert/presentation/pages/bloc/historical_price_bloc.dart';
 import 'package:transfert/presentation/pages/bloc/money_transfert_bloc.dart';
+import 'package:transfert/presentation/pages/bloc/profile_bloc.dart';
 import 'package:transfert/presentation/pages/bloc/settings_bloc.dart';
 import 'package:transfert/presentation/pages/pages/login_page.dart';
 
@@ -17,7 +18,8 @@ Future<void> main() async {
         create: (context) => getIt<MoneyTransferBloc>()..add(LoadDataEvent())),
     BlocProvider(
         create: (context) =>
-            getIt<HistoricalPriceBloc>()..add(FetchHistoricalPrices()))
+            getIt<HistoricalPriceBloc>()..add(FetchHistoricalPrices())),
+    BlocProvider(create: (context) => getIt<ProfileBloc>()..add(LoadProfile()))
   ], child: MyApp())
       /* BlocProvider(
       create: (context) => getIt<SettingsBloc>()..add(LoadSettingsEvent()),

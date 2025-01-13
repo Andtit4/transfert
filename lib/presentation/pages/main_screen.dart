@@ -4,6 +4,7 @@ import 'package:transfert/presentation/cubit/navigation_cubit.dart';
 import 'package:transfert/presentation/pages/pages/dashboard/dashboard_page.dart';
 import 'package:transfert/presentation/pages/pages/historical_screen.dart';
 import 'package:transfert/presentation/pages/pages/history/histoy_page.dart';
+import 'package:transfert/presentation/pages/pages/profile_screen.dart';
 import 'package:transfert/presentation/pages/pages/send_money_page.dart';
 import 'package:transfert/presentation/pages/pages/transaction_page.dart';
 import 'package:transfert/presentation/pages/pages/setting_page.dart';
@@ -15,7 +16,8 @@ class MainScreen extends StatelessWidget {
     HistoryPage(),
     // HistoryPage(),
     SendMoneyPage(),
-    HistoricalScreen()
+    HistoricalScreen(),
+    ProfileScreen()
 
     /* const AddTransactionPage(),
     const NotificationsPage(),
