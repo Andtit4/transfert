@@ -1,29 +1,29 @@
 # transfert
 
-A new Flutter project.
+Un nouveau projet Flutter.
 
-## Getting Started
+## Pour commencer
 
-This project is a starting point for a Flutter application.
+Ce projet est un point de départ pour une application Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Voici quelques ressources pour vous aider à démarrer si c'est votre premier projet Flutter :
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Lab: Créez votre première application Flutter](https://docs.flutter.dev/get-started/codelab)
+- [Carnet de recettes: Exemples utiles de Flutter](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pour obtenir de l'aide pour démarrer avec le développement Flutter, consultez la
+[documentation en ligne](https://docs.flutter.dev/), qui propose des tutoriels,
+des exemples, des conseils sur le développement mobile, et une référence complète de l'API.
 
-## Project architecture
+## Architecture du projet
 
 lib/
 └── presentation/
-    ├── pages/           # Tes écrans
+    ├── pages/           # Vos écrans
     ├── widgets/         # Les composants réutilisables
     └── bloc/           # La gestion d'état, le Domain Layer, Département Stratégique. lib/
 └── domain/
-    ├── entities/       # Tes modèles de données
+    ├── entities/       # Vos modèles de données
     ├── usecases/       # Les actions possibles
     └── repositories/   # Les contrats de données et le back office, lib/
 └── data/
